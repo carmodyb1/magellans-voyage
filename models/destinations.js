@@ -26,9 +26,10 @@ var locations = [
 	}, 
 	{
 		location: "Philippines",
-		description: "Island"
+		description: "Island", 
+		next:  "Seville"
 	} 	
-]
+];
 
 module.exports = locations;
 

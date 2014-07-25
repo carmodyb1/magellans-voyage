@@ -3,23 +3,9 @@ extends layout
 block content
 	h1 Magellan's voyages
 
-	.destinations
-		for locations in magellanStops
-			.destination
-
-				h2=destination.location
-				
-
-
-
-
-				//- p	
-				//- 	b Destination:
-				//- 	| #{destination.destination}
-				//- p
-				//- 	b Type of destination:
-				//- 	| #{destination.description}	
-
-
+	.content
+		h2 #{local.location}
+		p #{local.description}
+		a(href="/#{local.next}").nextPage To #{local.next}
 
 

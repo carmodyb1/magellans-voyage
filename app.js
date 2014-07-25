@@ -5,12 +5,11 @@ var app = express();
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser());
 
 app.get('/', controller.index);
 
-app.get('/', )
+app.get("/:name", controller.nextPage);
 
-var server = app.listen(5888, function() {
+var server = app.listen(process.env.PORT || 5888, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
